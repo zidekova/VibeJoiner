@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "367485429697",
+    "project_id": "vibejoiner",
+    "storage_bucket": "vibejoiner.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367485429697:android:b2f401640af7c6fb91f140",
+        "android_client_info": {
+          "package_name": "com.example.vibejoiner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ1Q8q1gEUrqZGUMUNXqGDh1weSBPxAyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

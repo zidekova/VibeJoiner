@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:vibejoiner/bottom_bar.dart';
 
@@ -11,8 +12,16 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
+    return Scaffold(
+      appBar: AppBar(actions: [
+        IconButton(
+          icon: const Icon(Icons.logout),
+          onPressed: () {
+            FirebaseAuth.instance.signOut();
+          },
+        ),
+      ]),
+      body: const SafeArea(
         child: Center(
           child: Padding(
             padding: EdgeInsets.symmetric(vertical: 20),

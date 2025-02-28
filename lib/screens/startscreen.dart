@@ -99,7 +99,6 @@ class _StartScreenState extends State<StartScreen>
                 child: const Text(
                   'HUDBA NÁS SPÁJA',
                   style: TextStyle(
-                    color: Colors.white,
                     fontSize: 20,
                     fontStyle: FontStyle.italic,
                   ),
@@ -112,7 +111,6 @@ class _StartScreenState extends State<StartScreen>
               // button registracia
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  //backgroundColor: Colors.white,
                   minimumSize: const Size(200, 50),
                 ),
                 onPressed: () {
@@ -123,7 +121,6 @@ class _StartScreenState extends State<StartScreen>
                 },
                 child: const Text(
                   'ZAREGISTRUJ SA',
-                  //style: TextStyle(color: Color(0x00002eff)),
                 ),
               ),
 
@@ -132,8 +129,7 @@ class _StartScreenState extends State<StartScreen>
               // button login
               OutlinedButton(
                 style: OutlinedButton.styleFrom(
-                  side: const BorderSide(color: Colors.white),
-                  //foregroundColor: Colors.white,
+                  side: const BorderSide(),
                 ),
                 onPressed: () {
                   Navigator.push(
