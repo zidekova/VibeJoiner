@@ -1,9 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:vibejoiner/screens/chatlistscreen.dart';
-import 'package:vibejoiner/screens/homescreen.dart';
-import 'package:vibejoiner/screens/orderscreen.dart';
-import 'package:vibejoiner/screens/profilescreen.dart';
-import 'package:vibejoiner/screens/searchscreen.dart';
+import 'package:vibejoiner/routes/app_router.gr.dart';
 
 class BottomBar extends StatelessWidget {
   const BottomBar({super.key});
@@ -16,10 +13,7 @@ class BottomBar extends StatelessWidget {
         // profilescreen
         IconButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const ProfileScreen()),
-            );
+            context.router.replace(const ProfileRoute());
           },
           icon: const Icon(Icons.person),
           iconSize: 40,
@@ -28,10 +22,7 @@ class BottomBar extends StatelessWidget {
         // chatlistscreen
         IconButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const ChatlistScreen()),
-            );
+            context.router.replace(const ChatlistRoute());
           },
           icon: const Icon(Icons.chat),
           iconSize: 40,
@@ -40,10 +31,7 @@ class BottomBar extends StatelessWidget {
         // homescreen
         IconButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const HomeScreen()),
-            );
+            context.router.replace(const HomeRoute());
           },
           icon: const Icon(Icons.home),
           iconSize: 40,
@@ -52,10 +40,7 @@ class BottomBar extends StatelessWidget {
         // searchscreen
         IconButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const SearchScreen()),
-            );
+            context.router.replace(const SearchRoute());
           },
           icon: const Icon(Icons.search),
           iconSize: 40,
@@ -64,10 +49,7 @@ class BottomBar extends StatelessWidget {
         // orderscreen
         IconButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const OrderScreen()),
-            );
+            context.router.replace(const OrderRoute());
           },
           icon: const Icon(Icons.euro),
           iconSize: 40,

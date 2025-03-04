@@ -1,8 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:vibejoiner/screens/homescreen.dart';
-import 'package:vibejoiner/screens/startscreen.dart';
+import 'package:vibejoiner/screens/homescreen/homescreen.dart';
+import 'package:vibejoiner/screens/startscreen/startscreen.dart';
+import 'package:auto_route/auto_route.dart';
 
+@RoutePage()
 class AuthScreen extends StatelessWidget {
   const AuthScreen({super.key});
 
