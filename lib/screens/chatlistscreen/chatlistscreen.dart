@@ -15,7 +15,12 @@ class _ChatlistScreenState extends State<ChatlistScreen> {
   @override
   Widget build(BuildContext context) {
     return CenterScaffold(
-      children: [Text('Chatlist Screen'), SizedBox(height: 50), BottomBar()],
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text('Chatlist Screen'),
+      ),
+      bottomNavigationBar: BottomBar(),
+      children: [],
     );
   }
 }

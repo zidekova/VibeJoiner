@@ -7,54 +7,57 @@ class BottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      spacing: 20,
-      children: [
-        // profilescreen
-        IconButton(
-          onPressed: () {
-            context.router.replace(const ProfileRoute());
-          },
-          icon: const Icon(Icons.person),
-          iconSize: 40,
-        ),
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Wrap(
+        spacing: 20,
+        children: [
+          // profilescreen
+          IconButton(
+            onPressed: () {
+              context.router.replace(const ProfileRoute());
+            },
+            icon: const Icon(Icons.person),
+            iconSize: 40,
+          ),
 
-        // chatlistscreen
-        IconButton(
-          onPressed: () {
-            context.router.replace(const ChatlistRoute());
-          },
-          icon: const Icon(Icons.chat),
-          iconSize: 40,
-        ),
+          // chatlistscreen
+          IconButton(
+            onPressed: () {
+              context.router.replace(const ChatlistRoute());
+            },
+            icon: const Icon(Icons.chat),
+            iconSize: 40,
+          ),
 
-        // homescreen
-        IconButton(
-          onPressed: () {
-            context.router.replace(const HomeRoute());
-          },
-          icon: const Icon(Icons.home),
-          iconSize: 40,
-        ),
+          // homescreen
+          IconButton(
+            onPressed: () {
+              context.router.replace(const HomeRoute());
+            },
+            icon: const Icon(Icons.home),
+            iconSize: 40,
+          ),
 
-        // searchscreen
-        IconButton(
-          onPressed: () {
-            context.router.replace(const SearchRoute());
-          },
-          icon: const Icon(Icons.search),
-          iconSize: 40,
-        ),
+          // searchscreen
+          IconButton(
+            onPressed: () {
+              context.router.replace(const SearchRoute());
+            },
+            icon: const Icon(Icons.search),
+            iconSize: 40,
+          ),
 
-        // orderscreen
-        IconButton(
-          onPressed: () {
-            context.router.replace(const OrderRoute());
-          },
-          icon: const Icon(Icons.euro),
-          iconSize: 40,
-        ),
-      ],
+          // orderscreen
+          IconButton(
+            onPressed: () {
+              context.router.replace(const OrderRoute());
+            },
+            icon: const Icon(Icons.euro),
+            iconSize: 40,
+          ),
+        ],
+      ),
     );
   }
 }

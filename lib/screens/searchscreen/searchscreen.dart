@@ -14,8 +14,13 @@ class SearchScreen extends StatefulWidget {
 class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
-    return const CenterScaffold(
-      children: [Text('Search Screen'), SizedBox(height: 50), BottomBar()],
+    return CenterScaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Search Screen'),
+      ),
+      bottomNavigationBar: BottomBar(),
+      children: [],
     );
   }
 }

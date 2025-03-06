@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vibejoiner/routes/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:vibejoiner/firebase_options.dart';
@@ -9,7 +10,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const VibeJoiner());
+  runApp(const ProviderScope(child: VibeJoiner()));
 }
 
 class VibeJoiner extends StatelessWidget {

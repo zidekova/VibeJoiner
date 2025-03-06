@@ -15,6 +15,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return CenterScaffold(
-        children: [Text('Profile Screen'), SizedBox(height: 50), BottomBar()]);
+        appBar: AppBar(
+          centerTitle: true,
+          title: const Text('Profile Screen'),
+        ),
+        bottomNavigationBar: BottomBar(),
+        children: []);
   }
 }

@@ -1,8 +1,8 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:vibejoiner/components/bottom_bar.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:vibejoiner/components/center_scaffold.dart';
+import 'package:vibejoiner/services/auth_service.dart';
 
 @RoutePage()
 class HomeScreen extends StatefulWidget {
@@ -13,30 +13,21 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  void signOut(BuildContext context) async {
-    try {
-      await FirebaseAuth.instance.signOut();
-    } catch (e) {
-      // ignore: use_build_context_synchronously
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Nepodarilo sa odhlásiť")),
-      );
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return CenterScaffold(
-      /*appBar: AppBar(actions: [
-        IconButton(
-          icon: const Icon(Icons.logout),
-          onPressed: () {
-            signOut(context);
-          },
-        ),
-      ]),*/
-
-      children: [Text('Home Screen'), SizedBox(height: 50), BottomBar()],
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text('Home Screen'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () => AuthService().signOut(context),
+          ),
+        ],
+      ),
+      bottomNavigationBar: BottomBar(),
+      children: [], // BottomBar je na spodku
     );
   }
 }

@@ -14,8 +14,13 @@ class OrderScreen extends StatefulWidget {
 class _OrderScreenState extends State<OrderScreen> {
   @override
   Widget build(BuildContext context) {
-    return const CenterScaffold(
-      children: [Text('Order Screen'), SizedBox(height: 50), BottomBar()],
+    return CenterScaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Order Screen'),
+      ),
+      bottomNavigationBar: BottomBar(),
+      children: [],
     );
   }
 }

@@ -1,9 +1,8 @@
-import 'package:vibejoiner/components/blank_button.dart';
 import 'package:vibejoiner/components/center_scaffold.dart';
-import 'package:vibejoiner/components/solid_button.dart';
-import 'package:vibejoiner/routes/app_router.gr.dart';
+import 'package:vibejoiner/components/sign_in_button.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:vibejoiner/services/auth_service.dart';
 
 @RoutePage()
 class StartScreen extends StatefulWidget {
@@ -16,39 +15,34 @@ class StartScreen extends StatefulWidget {
 class _StartScreenState extends State<StartScreen> {
   @override
   Widget build(BuildContext context) {
-    return CenterScaffold(
-      children: [
-        // logo
-        Image.asset('images/logo_vibejoiner.png', width: 300),
+    return Align(
+      alignment: Alignment.center,
+      child: CenterScaffold(
+        children: [
+          // logo
+          Image.asset('images/logo_vibejoiner.png', width: 300),
 
-        // slogan
-        Text(
-          'HUDBA NÁS SPÁJA',
-          style: TextStyle(
-            fontSize: 20,
-            fontStyle: FontStyle.italic,
+          // slogan
+          Text(
+            'HUDBA NÁS SPÁJA',
+            style: TextStyle(
+              fontSize: 20,
+              fontStyle: FontStyle.italic,
+            ),
+            textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
-        ),
 
-        const SizedBox(height: 50),
+          const SizedBox(height: 50),
 
-        // button registracia
-        SolidButton(
-            text: 'ZAREGISTRUJ SA',
-            onPressed: () {
-              context.router.push(RegistrationRoute());
-            }),
-
-        const SizedBox(height: 25),
-
-        // button login
-        BlankButton(
-            text: 'PRIHLÁS SA',
-            onPressed: () {
-              context.router.push(LoginRoute());
-            })
-      ],
+          // button google
+          SignInButton(
+            text: 'REGISTRÁCIA ALEBO PRIHLÁSENIE',
+            onPressed: () async {
+              await AuthService().googleSignIn(context);
+            },
+          ),
+        ],
+      ),
     );
   }
 }
