@@ -3,6 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+bool isUserNew = false;
+
 class AuthService {
   Future<void> googleSignIn(BuildContext context) async {
     showDialog(
@@ -17,8 +19,15 @@ class AuthService {
     );
 
     // ignore: use_build_context_synchronously
-    context.router.pop();
-    await FirebaseAuth.instance.signInWithCredential(credential);
+    context.pop();
+
+    final UserCredential userCredential =
+        await FirebaseAuth.instance.signInWithCredential(credential);
+    if (userCredential.additionalUserInfo?.isNewUser ?? false) {
+      isUserNew = true;
+    } else {
+      isUserNew = false;
+    }
   }
 
   Future<void> signOut(BuildContext context) async {

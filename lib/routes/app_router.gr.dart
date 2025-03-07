@@ -14,7 +14,7 @@ import 'package:vibejoiner/screens/authscreen/authscreen.dart' as _i1;
 import 'package:vibejoiner/screens/chatlistscreen/chatlistscreen.dart' as _i2;
 import 'package:vibejoiner/screens/homescreen/homescreen.dart' as _i3;
 import 'package:vibejoiner/screens/loginscreen/loginscreen.dart' as _i4;
-import 'package:vibejoiner/screens/mainscreen.dart' as _i5;
+import 'package:vibejoiner/screens/mainscreen/mainscreen.dart' as _i5;
 import 'package:vibejoiner/screens/orderscreen/orderscreen.dart' as _i6;
 import 'package:vibejoiner/screens/profilescreen/profilescreen.dart' as _i7;
 import 'package:vibejoiner/screens/registrationscreen/registrationscreen.dart'
