@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vibejoiner/screens/homescreen/homescreen.dart';
+import 'package:vibejoiner/screens/mainscreen.dart';
 import 'package:vibejoiner/screens/startscreen/startscreen.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:vibejoiner/riverpod/auth_provider.dart';
@@ -17,7 +17,7 @@ class AuthScreen extends ConsumerWidget {
       body: authState.when(
         data: (user) {
           if (user != null) {
-            return const HomeScreen();
+            return const MainScreen();
           } else {
             return const StartScreen();
           }

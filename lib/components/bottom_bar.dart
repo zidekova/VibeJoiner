@@ -59,43 +59,5 @@ class BottomBar extends StatelessWidget {
         ],
       ),
     );
-    /*return AutoTabsScaffold(
-      routes: [
-        ProfileRoute(),
-        ChatlistRoute(),
-        HomeRoute(),
-        SearchRoute(),
-        OrderRoute(),
-      ],
-      bottomNavigationBuilder: (context, tabsRouter) {
-        return BottomNavigationBar(
-          currentIndex: tabsRouter.activeIndex,
-          onTap: tabsRouter.setActiveIndex,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Profile',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.chat),
-              label: 'Chatlist',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: 'Search',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.euro),
-              label: 'Order',
-            ),
-          ],
-        );
-      },
-    );
-  }*/
   }
 }
