@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vibejoiner/components/bottom_bar.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:vibejoiner/components/center_scaffold.dart';
 
@@ -19,7 +18,6 @@ class _OrderScreenState extends State<OrderScreen> {
         centerTitle: true,
         title: Text('Order Screen'),
       ),
-      bottomNavigationBar: BottomBar(),
       children: [],
     );
   }

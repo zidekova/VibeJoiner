@@ -15,7 +15,7 @@ class BottomBar extends StatelessWidget {
           // profilescreen
           IconButton(
             onPressed: () {
-              context.router.replace(const ProfileRoute());
+              context.router.popAndPush(const ProfileRoute());
             },
             icon: const Icon(Icons.person),
             iconSize: 40,
@@ -24,7 +24,7 @@ class BottomBar extends StatelessWidget {
           // chatlistscreen
           IconButton(
             onPressed: () {
-              context.router.replace(const ChatlistRoute());
+              context.router.popAndPush(const ChatlistRoute());
             },
             icon: const Icon(Icons.chat),
             iconSize: 40,
@@ -33,7 +33,7 @@ class BottomBar extends StatelessWidget {
           // homescreen
           IconButton(
             onPressed: () {
-              context.router.replace(const HomeRoute());
+              context.router.popAndPush(const HomeRoute());
             },
             icon: const Icon(Icons.home),
             iconSize: 40,
@@ -42,7 +42,7 @@ class BottomBar extends StatelessWidget {
           // searchscreen
           IconButton(
             onPressed: () {
-              context.router.replace(const SearchRoute());
+              context.router.popAndPush(const SearchRoute());
             },
             icon: const Icon(Icons.search),
             iconSize: 40,
@@ -51,7 +51,7 @@ class BottomBar extends StatelessWidget {
           // orderscreen
           IconButton(
             onPressed: () {
-              context.router.replace(const OrderRoute());
+              context.router.popAndPush(const OrderRoute());
             },
             icon: const Icon(Icons.euro),
             iconSize: 40,
@@ -59,5 +59,43 @@ class BottomBar extends StatelessWidget {
         ],
       ),
     );
+    /*return AutoTabsScaffold(
+      routes: [
+        ProfileRoute(),
+        ChatlistRoute(),
+        HomeRoute(),
+        SearchRoute(),
+        OrderRoute(),
+      ],
+      bottomNavigationBuilder: (context, tabsRouter) {
+        return BottomNavigationBar(
+          currentIndex: tabsRouter.activeIndex,
+          onTap: tabsRouter.setActiveIndex,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.chat),
+              label: 'Chatlist',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'Search',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.euro),
+              label: 'Order',
+            ),
+          ],
+        );
+      },
+    );
+  }*/
   }
 }

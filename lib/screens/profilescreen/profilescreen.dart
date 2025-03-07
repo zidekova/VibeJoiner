@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vibejoiner/components/bottom_bar.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:vibejoiner/components/center_scaffold.dart';
 
@@ -19,7 +18,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
           centerTitle: true,
           title: const Text('Profile Screen'),
         ),
-        bottomNavigationBar: BottomBar(),
         children: []);
   }
 }

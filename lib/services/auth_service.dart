@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthService {
-  googleSignIn(BuildContext context) async {
+  Future<void> googleSignIn(BuildContext context) async {
     showDialog(
         context: context,
         builder: (context) => const Center(child: CircularProgressIndicator()));
@@ -15,12 +15,13 @@ class AuthService {
       accessToken: auth.accessToken,
       idToken: auth.idToken,
     );
+
     // ignore: use_build_context_synchronously
     context.router.pop();
-    return await FirebaseAuth.instance.signInWithCredential(credential);
+    await FirebaseAuth.instance.signInWithCredential(credential);
   }
 
-  signOut(BuildContext context) async {
+  Future<void> signOut(BuildContext context) async {
     showDialog(
       context: context,
       builder: (context) => const Center(child: CircularProgressIndicator()),
@@ -28,9 +29,6 @@ class AuthService {
 
     try {
       await GoogleSignIn().signOut();
-      print("GoogleSignIn disconnected");
-      await FirebaseAuth.instance.signOut();
-      print("FirebaseAuth signed out");
     } catch (e) {
       // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(
@@ -38,6 +36,7 @@ class AuthService {
       );
     }
     // ignore: use_build_context_synchronously
-    context.router.pop();
+    context.router.popUntilRoot();
+    await FirebaseAuth.instance.signOut();
   }
 }

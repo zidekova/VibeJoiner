@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vibejoiner/components/bottom_bar.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:vibejoiner/components/center_scaffold.dart';
 import 'package:vibejoiner/services/auth_service.dart';
@@ -26,8 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomBar(),
-      children: [], // BottomBar je na spodku
+      children: [],
     );
   }
 }

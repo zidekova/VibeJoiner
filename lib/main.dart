@@ -18,11 +18,13 @@ class VibeJoiner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appRouter = AppRouter();
+
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       darkTheme: darkTheme,
       theme: lightTheme,
-      routerConfig: AppRouter().config(),
+      routerConfig: appRouter.config(),
     );
   }
 }
