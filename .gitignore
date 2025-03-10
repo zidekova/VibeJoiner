@@ -9,6 +9,7 @@
 .history
 .svn/
 migrate_working_dir/
+.cxx/Debug/173w564k/
 
 # IntelliJ related
 *.iml

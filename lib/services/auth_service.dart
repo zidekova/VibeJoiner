@@ -48,4 +48,8 @@ class AuthService {
     context.router.popUntilRoot();
     await FirebaseAuth.instance.signOut();
   }
+
+  User? getCurrentUser() {
+    return FirebaseAuth.instance.currentUser;
+  }
 }
